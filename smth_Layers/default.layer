@@ -1,0 +1,559 @@
+SCR_GameModeEditor GameMode_Editor_Full1 : "{DA3986AF1B5032B7}Prefabs/MP/Modes/Editor/GameMode_Editor_Full.et" {
+ components {
+  SCR_EntityCatalogManagerComponent "{5C9AD18D91F9E87E}" {
+   m_aEntityCatalogs {
+    SCR_EntityCatalogMultiList "{5C9AD18D9D38E99E}" : "{B56E8B4D4B195559}Configs/EntityCatalog/US/Characters_EntityCatalog_US.conf" {
+    }
+   }
+  }
+ }
+ coords 2692.319 24.219 5498.706
+}
+$grp GenericEntity {
+ {
+  components {
+   Persistence "{69A8B8AF600C18C1}" {
+   }
+   BLBeltComponent "{69A8B8AF600C18D1}" {
+    m_iCaliber "762x51"
+   }
+   BLGadgetComponent "{69A8B8AF600C18E4}" {
+    m_eAnimVariable ANPRC68
+   }
+   BuddyLoadCompat "{69A8B8AF600C18E6}" {
+   }
+   InventoryItemComponent "{69A8B8AF600C194B}" {
+    Attributes SCR_ItemAttributeCollection "{69A8B8AF600C1949}" {
+     ItemDisplayName UIInfo "{69A8B8AF600C1892}" {
+      Name "7.62x51 Belt (50)"
+      Description "A 50 round 7.62x51 belt used for belt linking"
+     }
+     ItemPhysAttributes ItemPhysicalAttributes "{69A8B8AF600C18A7}" {
+      Weight 0.09
+      SizeSetupStrategy Manual
+      ItemDimensions 5 5 5
+      ItemVolume 350
+     }
+     ItemAnimationAttributes ItemAnimationAttributes "{69A8B8AF600C194F}" {
+      AnimationInstance "{332D4A7512E78419}Assets/Items/Equipment/workspaces/Radio_ANPRC68_player.asi"
+      AnimationAttachments {
+       AnimationAttachmentInfo "{69A8B8AF600C194E}" {
+        AnimGraph "{402BB5FA2891D687}Assets/Items/Equipment/workspaces/Radio_ANPRC68.agr"
+        AnimInstance "{332D4A7512E78419}Assets/Items/Equipment/workspaces/Radio_ANPRC68_player.asi"
+        BindingName "Gadget"
+       }
+      }
+      AllowInspection 1
+     }
+     m_Size SLOT_1x1
+     m_SlotType SLOT_ANY
+    }
+   }
+   MagazineComponent "{69A8B8AF600C1952}" {
+    MaxAmmo 50
+   }
+   MeshObject "{69A8B8AF600C1966}" {
+    Object "{620C873093561D00}Models/OTAC_AmmoBelt_762_50.xob"
+    InheritVisibility 1
+   }
+   RigidBody "{69A8B8AF600C196C}" {
+    ModelGeometry 1
+   }
+   SCR_SoundDataComponent "{69A8B8AF600C190A}" {
+    m_aAudioSourceConfiguration {
+     SCR_AudioSourceConfiguration "{69A8B8AF600C1905}" {
+      m_sSoundProject "{11AC3DB5EF498256}Sounds/Weapons/_SharedData/PickUp/Weapons_PickUp_LMGM249_Magazine.acp"
+      m_sSoundEventName "SOUND_PICK_UP"
+     }
+     SCR_AudioSourceConfiguration "{69A8B8AF600C1901}" {
+      m_sSoundProject "{11AC3DB5EF498256}Sounds/Weapons/_SharedData/PickUp/Weapons_PickUp_LMGM249_Magazine.acp"
+      m_sSoundEventName "SOUND_EQUIP"
+      m_eFlags 0
+     }
+     SCR_AudioSourceConfiguration "{69A8B8AF600C1909}" {
+      m_sSoundProject "{5DB34B1BB17CA63B}Sounds/Weapons/_SharedData/Drop/Weapons_Drop_LMG.acp"
+      m_sSoundEventName "SOUND_DROP"
+     }
+    }
+   }
+   ActionsManagerComponent "{69A8B8AF600C19FE}" {
+    ActionContexts {
+     UserActionContext "{69A8B8AF600C192A}" {
+      ContextName "default"
+      Position PointInfo "{69A8B8AF600C1928}" {
+       Offset 0 0.05 0
+      }
+      Radius 0.15
+     }
+     UserActionContext "{69A8B8AF600C193D}" {
+      UIInfo UIInfo "{69A8B8AF600C1932}" {
+       Name "Check Ammo"
+      }
+      ContextName "Check Ammo"
+      Position PointInfo "{69A8B8AF600C193C}" {
+       Offset 0 0.1354 0.0259
+      }
+     }
+    }
+    additionalActions {
+     SCR_PickUpItemAction "{69A8B8AF600C19E5}" {
+      ParentContextList {
+       "default"
+      }
+      UIInfo SCR_ActionUIInfo "{69A8B8AF600C19DB}" {
+       Name "#AR-Inventory_PickUp"
+       m_sIconName "pick-up"
+      }
+     }
+     SCR_AttachItemFromInventoryAction "{69A8B8AF600C19EB}" {
+      ParentContextList {
+       "magazine"
+      }
+      UIInfo SCR_ActionUIInfo "{69A8B8AF600C19E9}" {
+       Name "#AR-UserAction_Attach"
+       m_sIconName "magazine"
+      }
+      CanAggregate 1
+      "Inventory action" 1
+     }
+     BLCheckAmmo "{69A8B8AF69397E26}" {
+      ParentContextList {
+       "Check Ammo"
+      }
+      UIInfo UIInfo "{69A8B8AFA3841A37}" {
+       Name "Check Ammo"
+       Description "50 rounds"
+      }
+      Duration 1
+     }
+    }
+   }
+   RplComponent "{69A8B8AF600C1985}" {
+    "Rpl State Override" Runtime
+    "Parent Node From Parent Entity" 0
+   }
+   Hierarchy "{69A8B8AF600C1981}" {
+   }
+  }
+  editor EntityEditorProps "{69A8B8AF600C198A}" {
+   Color 1 0 0 1
+  }
+  coords 5084.752 689.509 6338.601
+ }
+ {
+  coords 6923.263 438.469 6782.429
+ }
+ {
+  coords 6922.088 438.472 6781.709
+ }
+ {
+  coords 6921.754 438.475 6781.861
+ }
+ {
+  coords 6505.345 492.904 6621.996
+ }
+ {
+  components {
+   InventoryItemComponent "{6A18D43BC3BEA665}" {
+    Attributes SCR_ItemAttributeCollection "{6A18D43BC3BEA65B}" {
+     ItemDisplayName UIInfo "{6A18D43BC3BEA5B1}" {
+      Name "M60 Barrel "
+      Description "Spare M60 barrel used for barrel swapping."
+     }
+    }
+   }
+  }
+  coords 6514.789 493.428 6629.806
+ }
+ {
+  coords 6561.47 492.555 6634.104
+ }
+}
+$grp GenericEntity : "{06B68C58B72EAAC6}Prefabs/Items/Equipment/Backpacks/Backpack_ALICE_Medium.et" {
+ {
+  coords 5058.402 698.667 6319.97
+ }
+ {
+  coords 6920.513 438.493 6781.924
+ }
+}
+$grp GenericEntity : "{07707E45437C25FB}Prefabs/Items/Equipment/Ammo Belts/OTAC_AmmoBelt_762x51_Half.et" {
+ {
+  coords 5086.702 688.996 6340.649
+ }
+ {
+  coords 5085.074 688.945 6340.613
+ }
+ {
+  coords 5063.164 693.954 6298.348
+ }
+ {
+  coords 5059.72 698.453 6321.228
+ }
+ {
+  coords 6858.398 435.681 6800.424
+ }
+ {
+  coords 6953.143 436.705 6781.113
+ }
+ {
+  coords 6527.309 493.417 6634.273
+ }
+ {
+  coords 6536.661 493.375 6640.163
+ }
+ {
+  coords 6522.806 492.984 6602.57
+ }
+}
+$grp GenericEntity : "{281C6DAEB20B0A68}Prefabs/Items/Equipment/Ammo Belts/OTAC_AmmoBelt_556x45_50.et" {
+ {
+  coords 5053.477 698.937 6323.929
+ }
+ {
+  coords 5053.612 699.161 6324.5
+ }
+ {
+  coords 5060.862 698.54 6323.907
+ }
+ {
+  coords 5060.631 698.528 6323.539
+ }
+ {
+  coords 5058.037 698.733 6323.243
+ }
+ {
+  coords 5057.311 699.188 6320.587
+ }
+ {
+  coords 5086.692 689.092 6340.833
+ }
+ {
+  components {
+   ActionsManagerComponent "{69A2D12C9E882F0B}" {
+    additionalActions {
+     BLCheckAmmo "{69A8B8AFFBDC4EBC}" {
+      CanAggregate 1
+      "Sort Priority" 1
+     }
+    }
+   }
+  }
+  coords 5088.81 688.79 6325.075
+ }
+ {
+  coords 5085.744 688.983 6339.97
+ }
+ {
+  coords 5061.926 694.339 6297.167
+ }
+ {
+  coords 6953.708 436.703 6780.987
+ }
+ {
+  coords 6522.602 493.052 6601.011
+  angles 0 0 -98.232
+ }
+}
+$grp GenericEntity : "{2AA429F0BB987048}Prefabs/Items/Equipment/Ammo Belts/OTAC_AmmoBelt_556x45_Half.et" {
+ {
+  coords 5062.711 698.272 6324.293
+ }
+ {
+  coords 5086.5 689.048 6340.888
+ }
+ {
+  coords 5085.238 688.811 6341.934
+ }
+ {
+  coords 5063.422 694.164 6298.377
+ }
+ {
+  coords 5085.219 688.813 6347.515
+ }
+ {
+  coords 6860.382 435.674 6798.633
+ }
+ {
+  coords 6953.228 436.703 6780.992
+ }
+ {
+  coords 6523.125 492.956 6602.664
+ }
+}
+$grp SCR_ChimeraCharacter : "{37578B1666981FCE}Prefabs/Characters/Core/Character_Base.et" {
+ {
+  coords 5090.459 688.14 6328.423
+ }
+ {
+  coords 6924.947 437.933 6774.647
+ }
+ {
+  coords 6534.527 493.375 6640.071
+ }
+ {
+  coords 6515.444 492.891 6607.591
+ }
+ {
+  coords 6528.88 493.406 6637.262
+ }
+}
+GenericEntity : "{4FCBBDF274FD2157}Prefabs/Weapons/Magazines/Box_556x45_M249_200rnd_Ball.et" {
+ components {
+  AICombatPropertiesComponent "{59CE86D96C332DDF}" {
+   Priority 30
+  }
+  InventoryMagazineComponent "{51EED12B803954CC}" {
+   Attributes SCR_ItemAttributeCollection "{51EED12B86960275}" {
+    m_Size SLOT_1x1
+   }
+  }
+  MagazineComponent "{CA6BE4D6B4DAFD69}" {
+   MagazineWell MagazineWellM249 "{548A9B0442806949}" {
+   }
+   UIInfo MagazineUIInfo "{57126733AA401586}" {
+    Name "#AR-Magazine_M249_Name"
+    Icon ""
+    m_sAmmoCaliber "#AR-AmmunitionID_556x45mm"
+   }
+   ItemModel "{1A51E4023458231D}Assets/Weapons/Magazines/M249/Magazine_200rnd_M249_item.xob"
+   MaxAmmo 200
+   AmmoConfig "{2689915ED0E00994}Configs/Weapons/Ammo/Ammo_556x45.conf"
+   AmmoMapping +{
+   }
+  }
+  MeshObject "{CA6BE4D6A23F8EF0}" {
+   Object "{EBEA001AF1C25790}Assets/Weapons/Magazines/M249/Magazine_200rnd_M249.xob"
+  }
+  RigidBody "{571B0382401B1385}" {
+   Mass 2.5
+  }
+  SCR_SoundDataComponent "{5B18D200EBB5EA25}" {
+   m_aAudioSourceConfiguration {
+    SCR_AudioSourceConfiguration "{5B18D209080A5D15}" {
+     m_sSoundProject "{11AC3DB5EF498256}Sounds/Weapons/_SharedData/PickUp/Weapons_PickUp_LMGM249_Magazine.acp"
+    }
+    SCR_AudioSourceConfiguration "{5B18D2091B885AE6}" {
+     m_sSoundProject "{11AC3DB5EF498256}Sounds/Weapons/_SharedData/PickUp/Weapons_PickUp_LMGM249_Magazine.acp"
+    }
+    SCR_AudioSourceConfiguration "{5B18D20930D9E274}" {
+     m_sSoundProject "{5DB34B1BB17CA63B}Sounds/Weapons/_SharedData/Drop/Weapons_Drop_LMG.acp"
+    }
+   }
+  }
+  ActionsManagerComponent "{F092E6B0537754FD}" {
+   additionalActions {
+    SCR_AttachItemFromInventoryAction "{5A1E58F7D9256374}" {
+    }
+    BLUnpack "{69A4F47779FB396C}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo SCR_ActionUIInfo "{69A4DE8B841851DC}" {
+      Name "Unpack box"
+     }
+     Duration 1
+     "Sort Priority" 1
+    }
+    BLUnpack "{69A4DE88006543B9}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo SCR_ActionUIInfo "{69A4DE8B841851DC}" {
+      Name "Unpack box"
+     }
+     Duration 1
+     "Sort Priority" 1
+    }
+   }
+  }
+  MagazineAnimationComponent "{569C9107F417EDBC}" {
+   AnimGraph "{6E94E275C76E7E3C}Assets/Weapons/Magazines/workspaces/M249_magazine.agr"
+   AnimInstance "{83FEB7AEDB672CD2}Assets/Weapons/Magazines/workspaces/M249_Magazine.asi"
+   AutoVariablesBind 1
+   AnimatedMesh "{EBEA001AF1C25790}Assets/Weapons/Magazines/M249/Magazine_200rnd_M249.xob"
+   BulletMeshesToHide +{
+   }
+  }
+ }
+ coords 5058.685 699.304 6329.433
+}
+$grp GenericEntity : "{599A1E833BEF3A43}Prefabs/Weapons/MachineGuns/M249/MG_M249_base.et" {
+ {
+  coords 6557.787 492.774 6638.441
+ }
+ {
+  coords 6560.822 492.595 6633.444
+ }
+ {
+  coords 6561.083 492.591 6632.275
+ }
+}
+$grp GenericEntity : "{5AFD80D7814AAD04}Prefabs/Items/Equipment/Ammo Belts/OTAC_AmmoBelt_762x54r_50.et" {
+ {
+  coords 5052.858 698.77 6324.154
+ }
+ {
+  coords 5042.269 698.274 6298.159
+ }
+ {
+  coords 5061.815 698.268 6325.53
+ }
+ {
+  coords 5062.013 698.239 6325.374
+ }
+ {
+  coords 5061.51 698.188 6322.642
+ }
+ {
+  coords 5060.575 698.288 6321.738
+ }
+ {
+  coords 5086.438 688.964 6340.513
+ }
+ {
+  coords 5084.977 688.929 6340.799
+ }
+ {
+  coords 5060.617 698.513 6323.439
+ }
+ {
+  coords 6528.945 493.406 6633.185
+ }
+ {
+  coords 6537.132 493.375 6639.595
+ }
+ {
+  coords 6508.917 493.121 6621.925
+ }
+ {
+  coords 6523.085 492.992 6602.237
+ }
+}
+$grp GenericEntity : "{8E9682666CB56092}Prefabs/Weapons/Magazines/Box_556x45_M249_200rnd_base.et" {
+ {
+  coords 5059.503 698.64 6324.812
+ }
+ {
+  coords 5069.72 694.639 6332.452
+ }
+ {
+  coords 5057.581 698.684 6320.084
+ }
+}
+GenericEntity : "{995CF44535296AE3}Prefabs/Weapons/Magazines/Box_762x51_M60_100rnd_Base.et" {
+ coords 5058.136 698.688 6321.695
+}
+GenericEntity : "{AAF51CFA75A9CF8B}Prefabs/Weapons/Magazines/Box_762x51_M60_100rnd_4AP_1Tracer.et" {
+ coords 6527.665 493.413 6633.993
+}
+GenericEntity : "{BEEA49E27174B224}Prefabs/Weapons/Magazines/Box_762x54_PK_100rnd_Tracer.et" {
+ coords 6526.438 493.419 6632.351
+}
+$grp GenericEntity : "{C2B17649DE8535F8}Prefabs/Items/Equipment/Ammo Belts/OTAC_AmmoBelt_762x51_50.et" {
+ {
+  coords 5052.744 698.778 6323.759
+ }
+ {
+  coords 5058.709 698.715 6326.372
+ }
+ {
+  coords 5059.177 698.671 6326.509
+ }
+ {
+  coords 5061.608 698.342 6324.115
+ }
+ {
+  coords 5061.254 698.367 6323.751
+ }
+ {
+  coords 5085.46 688.931 6340.586
+ }
+ {
+  coords 6527.238 493.423 6633.684
+ }
+ {
+  coords 6536.58 493.375 6639.73
+ }
+ {
+  coords 6522.899 492.981 6602.095
+ }
+}
+$grp GenericEntity : "{D2B48DEBEF38D7D7}Prefabs/Weapons/MachineGuns/M249/MG_M249.et" {
+ {
+  coords 6562.51 492.539 6633.002
+ }
+ {
+  coords 6562.467 492.555 6631.989
+ }
+ {
+  coords 6561.823 492.528 6634.721
+ }
+}
+GenericEntity : "{E045E14D186D580F}Prefabs/Weapons/Magazines/Box_762x54_PK_100rnd_Base.et" {
+ coords 5057.699 698.696 6321.213
+}
+$grp GenericEntity : "{F54F6C453A8CB478}Prefabs/Weapons/Core/MachineGun_Base.et" {
+ {
+  coords 6509.455 493.308 6621.737
+ }
+ {
+  coords 6503.627 492.769 6620.345
+ }
+ {
+  coords 6504.786 492.762 6617.801
+ }
+ {
+  coords 6510.776 493.24 6625.787
+ }
+}
+$grp GenericEntity : "{F8E0D9FC6BF7D2F1}Prefabs/Items/Equipment/Ammo Belts/OTAC_AmmoBelt_762x54r_Half.et" {
+ {
+  coords 5086.66 688.932 6340.47
+ }
+ {
+  coords 5085.665 688.785 6342.086
+ }
+ {
+  coords 5063 694.138 6298.006
+ }
+ {
+  coords 6857.72 435.687 6800.87
+ }
+ {
+  coords 6953.156 436.706 6781.207
+ }
+ {
+  components {
+   BLBeltComponent "{69A2D12B952151E5}" {
+    Enabled 0
+   }
+   BLGadgetComponent "{69A2D12B952151E7}" {
+    Enabled 0
+   }
+   BuddyLoadCompat "{69A2D12B952151E2}" {
+    Enabled 0
+   }
+   InventoryItemComponent "{69A2D12B952151EC}" {
+    Attributes SCR_ItemAttributeCollection "{69A2D12B952151EE}" {
+     ItemDisplayName UIInfo "{69A2D12B952151E8}" {
+      Name "Barrel trust me bro"
+     }
+    }
+   }
+   MagazineComponent "{69A3199F15F9A4E6}" {
+    Enabled 0
+   }
+  }
+  coords 6531.249 493.406 6641.407
+ }
+ {
+  coords 6537.161 493.375 6640.072
+ }
+ {
+  coords 6509.117 493.123 6621.661
+ }
+ {
+  coords 6523.004 492.995 6602.632
+ }
+}

@@ -1,0 +1,23 @@
+GenericEntity : "{C2B17649DE8535F8}Prefabs/Items/Equipment/Ammo Belts/OTAC_AmmoBelt_762x51_50.et" {
+ ID "69A2D12B9521514B"
+ components {
+  BLBeltComponent "{69A2D12B952151E5}" {
+   m_iCaliber "762x54r"
+  }
+  InventoryItemComponent "{69A2D12B952151EC}" {
+   Attributes SCR_ItemAttributeCollection "{69A2D12B952151EE}" {
+    ItemDisplayName UIInfo "{69A2D12B952151E8}" {
+     Name "7.62x54r Belt (50)"
+     Description "A 50 round 7.62x54r belt used for belt linking"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes "{69A2D12B952151EA}" {
+     Weight 1.95
+     RestingUP Left
+     RestingAdditiveRotationLS 0 0 -10
+     RestingAdditiveOffsetLS -0.24 0 0
+    }
+   }
+  }
+ }
+ coords 6523.085 492.992 6602.237
+}

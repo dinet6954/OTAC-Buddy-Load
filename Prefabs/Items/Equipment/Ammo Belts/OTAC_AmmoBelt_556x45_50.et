@@ -1,0 +1,141 @@
+GenericEntity {
+ ID "69A2D12D13C63243"
+ components {
+  Persistence "{69A2D12EBA3D88EE}" {
+  }
+  BLBeltComponent "{69A2D12CEC43F665}" {
+   m_iCaliber "556x45"
+  }
+  BLGadgetComponent "{69A2D12CE7A486DB}" {
+   m_eAnimVariable ANPRC68
+  }
+  BuddyLoadCompat "{69A2D12CEE20EEB6}" {
+  }
+  InventoryItemComponent "{69A2D12EA07314EF}" {
+   Attributes SCR_ItemAttributeCollection "{69A2D12ED28E49BE}" {
+    ItemDisplayName UIInfo "{69A2D12ED1881B81}" {
+     Name "5.56x45 Belt (50)"
+     Description "A 50 round 5.56x45 belt used for belt linking"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes "{69A2D12EFE438C36}" {
+     Weight 0.785
+     SizeSetupStrategy Manual
+     ItemDimensions 5 5 5
+     ItemVolume 350
+     RestingUP Left
+     RestingAdditiveRotationLS 0 0 -10
+     RestingAdditiveOffsetLS -0.12 0 0
+    }
+    ItemAnimationAttributes ItemAnimationAttributes "{69A2D12F2E04FF21}" {
+     AnimationInstance "{332D4A7512E78419}Assets/Items/Equipment/workspaces/Radio_ANPRC68_player.asi"
+     AnimationAttachments {
+      AnimationAttachmentInfo "{5A6C68D9E9C72006}" {
+       AnimGraph "{402BB5FA2891D687}Assets/Items/Equipment/workspaces/Radio_ANPRC68.agr"
+       AnimInstance "{332D4A7512E78419}Assets/Items/Equipment/workspaces/Radio_ANPRC68_player.asi"
+       BindingName "Gadget"
+      }
+     }
+     AllowInspection 1
+    }
+    m_Size SLOT_1x1
+    m_SlotType SLOT_ANY
+   }
+  }
+  MagazineComponent "{69A3199946C0FE57}" {
+   UIInfo UIInfo "{69A3199984D502F4}" {
+    Name "5.56x45 belt (50)"
+    Description "A 50 round belt for use in belt linking"
+   }
+   MaxAmmo 50
+   AmmoMapping {
+   }
+  }
+  MeshObject "{69A2D12FD48363E4}" {
+   Object "{2926BA9791827062}Models/OTAC_AmmoBelt_556_50.xob"
+   InheritVisibility 1
+  }
+  RigidBody "{69A2D12FF4A0F980}" {
+   ModelGeometry 1
+  }
+  SCR_SoundDataComponent "{69A2D12C7DFFCC6E}" {
+   m_aAudioSourceConfiguration {
+    SCR_AudioSourceConfiguration "{69A2D12C7AC260FC}" {
+     m_sSoundProject "{11AC3DB5EF498256}Sounds/Weapons/_SharedData/PickUp/Weapons_PickUp_LMGM249_Magazine.acp"
+     m_sSoundEventName "SOUND_PICK_UP"
+    }
+    SCR_AudioSourceConfiguration "{69A2D12C7AFB53B4}" {
+     m_sSoundProject "{11AC3DB5EF498256}Sounds/Weapons/_SharedData/PickUp/Weapons_PickUp_LMGM249_Magazine.acp"
+     m_sSoundEventName "SOUND_EQUIP"
+     m_eFlags 0
+    }
+    SCR_AudioSourceConfiguration "{69A2D12C7ABBC349}" {
+     m_sSoundProject "{5DB34B1BB17CA63B}Sounds/Weapons/_SharedData/Drop/Weapons_Drop_LMG.acp"
+     m_sSoundEventName "SOUND_DROP"
+    }
+   }
+  }
+  ActionsManagerComponent "{69A2D12C9E882F0B}" {
+   ActionContexts {
+    UserActionContext "{69A2D12C980299AB}" {
+     ContextName "default"
+     Position PointInfo "{69A2D12CB564D641}" {
+      Offset 0 0.05 0
+     }
+     Radius 0.15
+    }
+    UserActionContext "{69A8B8A1A3DDD449}" {
+     UIInfo UIInfo "{69A8B8A1DDC05679}" {
+      Name "Check Ammo"
+     }
+     ContextName "Check Ammo"
+     Position PointInfo "{69A8B8A1C510E93C}" {
+      Offset 0 0.1354 0.0259
+     }
+    }
+   }
+   additionalActions {
+    SCR_PickUpItemAction "{69A2D12CD487A399}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo SCR_ActionUIInfo "{51EED12BE54D5CEC}" {
+      Name "#AR-Inventory_PickUp"
+      m_sIconName "pick-up"
+     }
+    }
+    SCR_AttachItemFromInventoryAction "{69A2D12CCC570516}" {
+     ParentContextList {
+      "magazine"
+     }
+     UIInfo SCR_ActionUIInfo "{5A1E58F7D137DE75}" {
+      Name "#AR-UserAction_Attach"
+      m_sIconName "magazine"
+     }
+     CanAggregate 1
+     "Inventory action" 1
+    }
+    BLCheckAmmo "{69A8B8AFFBDC4EBC}" {
+     ParentContextList {
+      "Check Ammo"
+     }
+     UIInfo UIInfo "{69A8B8AFA3841A37}" {
+      Name "Check Ammo"
+      Description "50 rounds"
+     }
+     Duration 1
+    }
+   }
+  }
+  RplComponent "{69A2D12CF3952D70}" {
+   "Rpl State Override" Runtime
+   "Parent Node From Parent Entity" 0
+  }
+  Hierarchy "{69A2D12C252010AB}" {
+  }
+ }
+ editor EntityEditorProps "{69A2D12EA8B969C3}" {
+  Color 1 0 0 1
+ }
+ coords 6522.225 492.997 6602.393
+ angles 0 0 -98.232
+}

@@ -1,0 +1,29 @@
+GenericEntity : "{C2B17649DE8535F8}Prefabs/Items/Equipment/Ammo Belts/OTAC_AmmoBelt_762x51_50.et" {
+ ID "69A2D12B9521514B"
+ components {
+  BLBeltComponent "{69A2D12B952151E5}" {
+   m_iCaliber "762x54r"
+  }
+  InventoryItemComponent "{69A2D12B952151EC}" {
+   Attributes SCR_ItemAttributeCollection "{69A2D12B952151EE}" {
+    ItemDisplayName UIInfo "{69A2D12B952151E8}" {
+     Name "7.62x54r Belt"
+     Description "A partially full 7.62x54r belt."
+    }
+    ItemPhysAttributes ItemPhysicalAttributes "{69A2D12B952151EA}" {
+     Weight 1.85
+     RestingUP Left
+     RestingAdditiveRotationLS 0 0 -10
+     RestingAdditiveOffsetLS -0.043 0 0
+    }
+    ItemAnimationAttributes ItemAnimationAttributes "{69A2D12B952151F5}" {
+     HandAdditiveTranslation 0.04 0 0
+    }
+   }
+  }
+  MeshObject "{69A2D12B952151F2}" {
+   Object "{DFDCD5B7EC4D011E}Models/OTAC_AmmoBelt_762_30.xob"
+  }
+ }
+ coords 6523.004 492.995 6602.632
+}

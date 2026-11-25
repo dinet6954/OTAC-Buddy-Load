@@ -1,0 +1,5 @@
+MatPBRBasic {
+ Color 0.44 0.44 0.44 1
+ BCRMap "{460AF1A88A48EFF1}Models/OTAC_AmmoBelt_762_BCR.edds"
+ NMOMap "{4A1808B979CAFF26}Models/OTAC_AmmoBelt_NMO.edds"
+}

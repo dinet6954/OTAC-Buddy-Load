@@ -1,0 +1,46 @@
+SCR_ChimeraCharacter {
+ ID "520EC961A090B1EE"
+ components {
+  ActionsManagerComponent "{520EA1D2F659CE02}" {
+   ActionContexts {
+    UserActionContext "{69AC794558296398}" {
+     ContextName "Launcher"
+     Position PointInfo "{69AC79459B44C156}" {
+      PivotID "RightHand"
+      Offset 0.1182 0.1981 0.0836
+     }
+    }
+    UserActionContext "{69AC7945B9449E0D}" {
+     ContextName "MG"
+     Position PointInfo "{69AC7945A5ACAC00}" {
+      PivotID "RightHand"
+      Offset 0.0791 -0.2322 0.0408
+     }
+    }
+   }
+   additionalActions {
+    BuddyLoad "{698AEA2A15E3F142}" {
+     ParentContextList {
+      "Launcher"
+     }
+     UIInfo SCR_ActionUIInfo "{69871C99A941CC07}" {
+      Name "Buddy Load"
+     }
+     VisibilityRange 2
+     Duration 3.5
+    }
+    BuddyLoadMG "{698AEA2A13FCA7E2}" {
+     ParentContextList {
+      "MG"
+     }
+     UIInfo SCR_ActionUIInfo "{6988DDA8AF98256C}" {
+      Name "Link Belt"
+     }
+     VisibilityRange 2
+     Duration 3
+    }
+   }
+  }
+ }
+ coords 6924.947 437.933 6774.647
+}

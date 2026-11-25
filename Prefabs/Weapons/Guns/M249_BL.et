@@ -1,0 +1,8 @@
+GenericEntity : "{599A1E833BEF3A43}Prefabs/Weapons/MachineGuns/M249/MG_M249_base.et" {
+ ID "CFBAA4B725411E45"
+ components {
+  BuddyLoadCompat "{6988DDA88CA81F5A}" {
+  }
+ }
+ coords 2673.749 24.333 5494.4
+}

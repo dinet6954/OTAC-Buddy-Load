@@ -1,0 +1,19 @@
+GenericEntity : "{F9E1A46E3ABA116F}Prefabs/Weapons/Core/Magazine_Base.et" {
+ ID "0922E741B2667475"
+ components {
+  ActionsManagerComponent "{F092E6B0537754FD}" {
+   additionalActions {
+    BLUnpack "{69A4F476F67DD290}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo SCR_ActionUIInfo "{69A4DE8B841851DC}" {
+      Name "Unpack box"
+     }
+     Duration 1
+     "Sort Priority" 1
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,134 @@
+GenericEntity {
+ ID "69A2D12B9521514B"
+ components {
+  Persistence "{69A2D12B9521515D}" {
+  }
+  BLBeltComponent "{69A2D12B952151E5}" {
+   m_iCaliber "762x51"
+  }
+  BLGadgetComponent "{69A2D12B952151E7}" {
+   m_eAnimVariable ANPRC68
+  }
+  BuddyLoadCompat "{69A2D12B952151E2}" {
+  }
+  InventoryItemComponent "{69A2D12B952151EC}" {
+   Attributes SCR_ItemAttributeCollection "{69A2D12B952151EE}" {
+    ItemDisplayName UIInfo "{69A2D12B952151E8}" {
+     Name "7.62x51 Belt (50)"
+     Description "A 50 round 7.62x51 belt used for belt linking"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes "{69A2D12B952151EA}" {
+     Weight 1.575
+     SizeSetupStrategy Manual
+     ItemDimensions 5 5 5
+     ItemVolume 350
+     RestingUP Left
+     RestingAdditiveRotationLS 0 0 -10
+     RestingAdditiveOffsetLS -0.25 0 0
+    }
+    ItemAnimationAttributes ItemAnimationAttributes "{69A2D12B952151F5}" {
+     AnimationInstance "{332D4A7512E78419}Assets/Items/Equipment/workspaces/Radio_ANPRC68_player.asi"
+     AnimationAttachments {
+      AnimationAttachmentInfo "{69A2D12B952151F7}" {
+       AnimGraph "{402BB5FA2891D687}Assets/Items/Equipment/workspaces/Radio_ANPRC68.agr"
+       AnimInstance "{332D4A7512E78419}Assets/Items/Equipment/workspaces/Radio_ANPRC68_player.asi"
+       BindingName "Gadget"
+      }
+     }
+     AllowInspection 1
+    }
+    m_Size SLOT_1x1
+    m_SlotType SLOT_ANY
+   }
+  }
+  MagazineComponent "{69A3199F15F9A4E6}" {
+   MaxAmmo 50
+  }
+  MeshObject "{69A2D12B952151F2}" {
+   Object "{620C873093561D00}Models/OTAC_AmmoBelt_762_50.xob"
+   InheritVisibility 1
+  }
+  RigidBody "{69A2D12B952151FD}" {
+   ModelGeometry 1
+  }
+  SCR_SoundDataComponent "{69A2D12B952151FE}" {
+   m_aAudioSourceConfiguration {
+    SCR_AudioSourceConfiguration "{69A2D12B952151A1}" {
+     m_sSoundProject "{11AC3DB5EF498256}Sounds/Weapons/_SharedData/PickUp/Weapons_PickUp_LMGM249_Magazine.acp"
+     m_sSoundEventName "SOUND_PICK_UP"
+    }
+    SCR_AudioSourceConfiguration "{69A2D12B952151A2}" {
+     m_sSoundProject "{11AC3DB5EF498256}Sounds/Weapons/_SharedData/PickUp/Weapons_PickUp_LMGM249_Magazine.acp"
+     m_sSoundEventName "SOUND_EQUIP"
+     m_eFlags 0
+    }
+    SCR_AudioSourceConfiguration "{69A2D12B952151A3}" {
+     m_sSoundProject "{5DB34B1BB17CA63B}Sounds/Weapons/_SharedData/Drop/Weapons_Drop_LMG.acp"
+     m_sSoundEventName "SOUND_DROP"
+    }
+   }
+  }
+  ActionsManagerComponent "{69A2D12B952151AF}" {
+   ActionContexts {
+    UserActionContext "{69A2D12B952151A9}" {
+     ContextName "default"
+     Position PointInfo "{69A2D12B952151AB}" {
+      Offset 0 0.05 0
+     }
+     Radius 0.15
+    }
+    UserActionContext "{69A8B8AE7CD70B71}" {
+     UIInfo UIInfo "{69A8B8A1DDC05679}" {
+      Name "Check Ammo"
+     }
+     ContextName "Check Ammo"
+     Position PointInfo "{69A8B8A1C510E93C}" {
+      Offset 0 0.1354 0.0259
+     }
+    }
+   }
+   additionalActions {
+    SCR_PickUpItemAction "{69A2D12B952151B6}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo SCR_ActionUIInfo "{69A2D12B95217081}" {
+      Name "#AR-Inventory_PickUp"
+      m_sIconName "pick-up"
+     }
+    }
+    SCR_AttachItemFromInventoryAction "{69A2D12B95217086}" {
+     ParentContextList {
+      "magazine"
+     }
+     UIInfo SCR_ActionUIInfo "{69A2D12B95217085}" {
+      Name "#AR-UserAction_Attach"
+      m_sIconName "magazine"
+     }
+     CanAggregate 1
+     "Inventory action" 1
+    }
+    BLCheckAmmo "{69A8B8AE754BC803}" {
+     ParentContextList {
+      "Check Ammo"
+     }
+     UIInfo UIInfo "{69A8B8A31B708E7C}" {
+      Name "Check Ammo"
+     }
+     Duration 0.5
+     "Sort Priority" 1
+    }
+   }
+  }
+  RplComponent "{69A2D12B9521708B}" {
+   "Rpl State Override" Runtime
+   "Parent Node From Parent Entity" 0
+  }
+  Hierarchy "{69A2D12B95217373}" {
+  }
+ }
+ editor EntityEditorProps "{69A2D12B95217371}" {
+  Color 1 0 0 1
+ }
+ coords 6522.899 492.981 6602.095
+}
